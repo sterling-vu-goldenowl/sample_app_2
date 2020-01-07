@@ -94,6 +94,7 @@ Rails.application.configure do
   #   :user_name      => ENV['GMAIL_USERNAME'],
   #   :password       => ENV['GMAIL_PASSWORD']
   # }
+  config.action_mailer.default_url_options = { host: 'secure-thicket-00563.herokuapp.com' }
 
   config.action_mailer.smtp_settings = {
     address:              'smtp.gmail.com',
