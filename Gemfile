@@ -15,6 +15,9 @@ gem 'bcrypt', '~> 3.1.12'
 
 gem 'faker', '1.7.3'
 
+gem 'carrierwave',             '1.2.2'
+gem 'mini_magick',             '4.7.0'
+
 gem 'bootstrap-will_paginate', '1.0.0'
 gem 'will_paginate',           '3.1.7'
 # Use postgresql as the database for Active Record
@@ -48,6 +51,10 @@ gem 'jbuilder', '~> 2.5'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 
+group :production do
+  gem 'fog', '1.42'
+end
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
@@ -59,10 +66,10 @@ group :development do
   gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'web-console', '>= 3.3.0'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
+  gem 'letter_opener'
+  gem 'mailcatcher'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
-  gem 'mailcatcher'
-  gem 'letter_opener'
 end
 
 group :test do

@@ -28,3 +28,6 @@
 
 # Ignore .env file
 .env
+
+# Ignore uploaded test images.
+/public/uploads
